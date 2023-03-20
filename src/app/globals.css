@@ -4,6 +4,12 @@
   --color-primary-shade: #559a37;
   --border-radius: 4px;
   --color-white: #fff;
+  --color-grey: #919191;
+  --color-red: rgb(203, 32, 39);
+  --color-twitter: #1da1f2;
+  --color-github: #967bb6;
+  --color-instagram: #fd1d1d;
+  --color-linkedin: #0077b5;
 }
 * {
   box-sizing: border-box;
@@ -11,7 +17,7 @@
   margin: 0;
   list-style: none;
   border: none;
-  color: #919191;
+  color: var(--color-grey);
   font-weight: 400;
 }
 
@@ -21,6 +27,11 @@ html {
 
 body {
   font-size: 1.6rem;
+}
+
+section {
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 h1,
@@ -35,14 +46,26 @@ h6 {
 a:link,
 a:visited {
   color: #428bca;
+  text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: 356fa2;
+  color: #356fa2;
 }
 
 .apply-primary-color {
   color: #6ac045;
   stroke: #6ac045;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--color-grey);
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
 }

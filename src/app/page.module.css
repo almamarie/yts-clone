@@ -1,0 +1,26 @@
+.wrapper {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+}
+
+.header h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.header p {
+  width: 65rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.header a {
+  display: block;
+}
+
+.announcement {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}

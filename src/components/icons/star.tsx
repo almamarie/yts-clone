@@ -1,4 +1,4 @@
-import styles from "./Star.module.css";
+import styles from "./Styles.module.css";
 const StarIcon = () => {
   return (
     <svg

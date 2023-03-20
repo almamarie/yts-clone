@@ -1,4 +1,5 @@
 import MainHeader from "@/components/layout/MainHeader";
+import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import "./globals.css";
 
 export const metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SocialMedia />
         <MainHeader />
         <main>{children}</main>
       </body>

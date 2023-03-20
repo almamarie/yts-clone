@@ -1,0 +1,46 @@
+.wrapper {
+  position: absolute;
+  top: 20rem;
+  left: 0;
+}
+
+.icon {
+  padding: 1.2rem;
+  display: block;
+}
+
+/* .icon:hover {
+  padding: 1.2rem 1.5rem;
+} */
+
+.icon svg {
+  fill: var(--color-white);
+  stroke: var(--color-white);
+}
+
+.github {
+  background-color: var(--color-github);
+}
+
+.twitter {
+  background-color: var(--color-twitter);
+}
+
+.instagram {
+  background-color: var(--color-instagram);
+}
+
+.instagram svg {
+  fill: none;
+}
+
+.linkedin {
+  background-color: var(--color-linkedin);
+}
+
+@media (max-width: 61.25em) {
+  .wrapper {
+    display: none;
+    visibility: hidden;
+  }
+}
