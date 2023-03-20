@@ -1,0 +1,29 @@
+.wrapper {
+  height: 4rem;
+  max-width: 100vw;
+  background-color: #1d1d1d;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  color: red;
+
+  &-search {
+    display: inline;
+    border-radius: 2rem;
+  }
+
+  &-nav {
+    display: inline;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}

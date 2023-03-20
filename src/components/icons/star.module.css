@@ -1,0 +1,6 @@
+.star {
+  stroke: var(--color-primary);
+  fill: var(--color-primary);
+  width: 2rem;
+  height: 2rem;
+}

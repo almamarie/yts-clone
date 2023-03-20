@@ -1,6 +1,48 @@
+:root {
+  --color-primary: #6ac045;
+  --color-primary-tint: #88cd6a;
+  --color-primary-shade: #559a37;
+  --border-radius: 4px;
+  --color-white: #fff;
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   list-style: none;
+  border: none;
+  color: #919191;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: fff;
+}
+
+a:link,
+a:visited {
+  color: #428bca;
+}
+
+a:hover,
+a:active {
+  color: 356fa2;
+}
+
+.apply-primary-color {
+  color: #6ac045;
+  stroke: #6ac045;
 }
