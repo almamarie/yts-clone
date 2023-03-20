@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { MovieType } from "@/util/types/movie";
 import { useState } from "react";
