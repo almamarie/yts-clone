@@ -9,9 +9,9 @@ import styles from "./Movie.module.css";
 const Movie: React.FC<{ movie: MovieType }> = (props) => {
   const [showCaption, setShowCaption] = useState<boolean>(false);
   const { movie } = props;
-  const wrapperStyles = `${styles.wrapper} ${{
-    "background-image": props.movie.background_image_original,
-  }}`;
+  // const wrapperStyles = `${styles.wrapper} ${{
+  //   "background-image": props.movie.background_image_original,
+  // }}`;
 
   function mouseEnter() {
     console.log(showCaption);
@@ -24,9 +24,9 @@ const Movie: React.FC<{ movie: MovieType }> = (props) => {
   }
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <figure
-        className={wrapperStyles}
+        className={styles.figure}
         onMouseEnter={mouseEnter}
         onMouseLeave={mouseOut}
       >
@@ -38,7 +38,9 @@ const Movie: React.FC<{ movie: MovieType }> = (props) => {
 
         {showCaption && (
           <figcaption className={styles["figure-caption"]}>
-            <StarIcon />
+            <div className={styles.star}>
+              <StarIcon />
+            </div>
             <h4 className={styles.rating}>{`${movie.rating} / 10`}</h4>
             <h4 className={styles.genres}>
               {movie.genres.length === 1

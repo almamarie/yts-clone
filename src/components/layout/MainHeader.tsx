@@ -1,4 +1,4 @@
-import styles from "./MainHeader.module.scss";
+import styles from "./MainHeader.module.css";
 import Logo from "../ui/logos/Logo";
 import Link from "next/link";
 

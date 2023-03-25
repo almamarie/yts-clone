@@ -1,5 +1,5 @@
 import styles from "./Styles.module.css";
-const StarIcon = () => {
+const IconStar = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +16,4 @@ const StarIcon = () => {
   );
 };
 
-export default StarIcon;
+export default IconStar;

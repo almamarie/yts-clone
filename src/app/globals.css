@@ -10,6 +10,7 @@
   --color-github: #967bb6;
   --color-instagram: #fd1d1d;
   --color-linkedin: #0077b5;
+  --color-dark-grey: #1d1d1d;
 }
 * {
   box-sizing: border-box;
@@ -26,12 +27,18 @@ html {
 }
 
 body {
+  padding-top: 2rem;
   font-size: 1.6rem;
 }
 
 section {
-  max-width: 120rem;
+  max-width: 100%;
+  padding: 0 10%;
   margin: 0 auto;
+}
+
+section:nth-child(odd) {
+  background-color: var(--color-dark-grey);
 }
 
 h1,
@@ -57,12 +64,6 @@ a:active {
 .apply-primary-color {
   color: #6ac045;
   stroke: #6ac045;
-}
-
-.horizontal-line {
-  width: 100%;
-  height: 0.5px;
-  background-color: var(--color-grey);
 }
 
 .social-icon {

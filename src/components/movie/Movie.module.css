@@ -1,15 +1,24 @@
 .wrapper {
   width: 20rem;
+}
+
+.figure {
+  width: 100%;
   height: 30rem;
   border: 5px solid #fff;
   border-radius: var(--border-radius);
   background-color: transparent;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-.wrapper:hover {
-  border-color: var(--primary-color);
+.figure:hover {
+  border-color: var(--color-primary);
+}
+
+.figure:hover .image {
+  filter: brightness(50%);
 }
 
 .image {
@@ -19,8 +28,15 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
-  z-index: -1;
+  z-index: inherit;
 }
+
+/* .figure-caption h4,
+.genre,
+.figure-caption,
+.star {
+  z-index: 1;
+} */
 
 .figure-caption {
   width: 100%;
@@ -34,6 +50,11 @@
   gap: 2rem;
   color: var(--color-white);
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+.figure-caption * {
+  z-index: inherit;
 }
 
 .figure-caption h4,
@@ -53,13 +74,19 @@
 }
 
 .title {
-  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
   font-size: 1.4rem;
+  text-align: left;
 }
 
 .title h4 {
   font-size: 1.6rem;
   color: var(--color-white);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @keyframes move-in {
