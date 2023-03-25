@@ -6,11 +6,13 @@ const MainHeader = () => {
   return (
     <header className={styles.wrapper}>
       <div className={styles.logo}>
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
         <h3>HD movies at the smallest file size</h3>
       </div>
 
-      <div className="navigation">
+      <div className={styles.navigation}>
         <input
           className={styles["navigation-search"]}
           type="search"
@@ -18,11 +20,16 @@ const MainHeader = () => {
         />
         <nav className={styles.nav}>
           <Link href="/home">Home</Link>
-          <Link className="highlight" href="/browse-movies">
-            4K
+          <Link href="/browse-movies">
+            <span className={styles["four-k"]}>4K</span>
           </Link>
           <Link href="/trending-movies">Trending</Link>
           <Link href="/browse-movies">Browse Movies</Link>
+          <div className={styles.auth}>
+            <Link href="/sign-in">Login</Link>
+            <div className={styles.bar}></div>
+            <Link href="/register">Register</Link>
+          </div>
         </nav>
       </div>
     </header>

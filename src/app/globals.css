@@ -12,6 +12,7 @@
   --color-linkedin: #0077b5;
   --color-dark-grey: #1d1d1d;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -27,6 +28,7 @@ html {
 }
 
 body {
+  font-family: Arimo, Arial, Helvetica, "Lucida Grande", sans-serif;
   padding-top: 2rem;
   font-size: 1.6rem;
 }
@@ -38,7 +40,11 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: var(--color-dark-grey);
+  background-color: rgb(23, 23, 23);
+}
+
+section:nth-child(even) {
+  background-color: rgb(29, 29, 29);
 }
 
 h1,
