@@ -1,5 +1,7 @@
 .wrapper {
   width: 20rem;
+  cursor: pointer;
+  /* background-color: red; */
 }
 
 .figure {
@@ -80,6 +82,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.title h4:hover {
+  color: var(--color-grey);
 }
 
 @keyframes move-in {

@@ -29,7 +29,7 @@ html {
 
 body {
   font-family: Arimo, Arial, Helvetica, "Lucida Grande", sans-serif;
-  padding-top: 2rem;
+  padding-top: 6rem;
   font-size: 1.6rem;
 }
 
@@ -76,3 +76,17 @@ a:active {
   width: 100%;
   height: 100%;
 }
+
+/* MOVIES UL STYLES */
+
+.movies {
+  margin-top: 2rem;
+  columns: 4;
+  padding: 4rem;
+}
+
+.movie {
+  margin-bottom: 1rem;
+}
+
+/* MOVIES UL STYLES ENDS HERE*/

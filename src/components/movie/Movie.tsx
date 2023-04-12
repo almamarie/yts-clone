@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { MovieType } from "@/util/types/movie";
+import Link from "next/link";
 import { useState } from "react";
 import StarIcon from "../icons/star";
 import Button from "../ui/button/Button";
@@ -9,9 +10,6 @@ import styles from "./Movie.module.css";
 const Movie: React.FC<{ movie: MovieType }> = (props) => {
   const [showCaption, setShowCaption] = useState<boolean>(false);
   const { movie } = props;
-  // const wrapperStyles = `${styles.wrapper} ${{
-  //   "background-image": props.movie.background_image_original,
-  // }}`;
 
   function mouseEnter() {
     console.log(showCaption);
@@ -25,40 +23,42 @@ const Movie: React.FC<{ movie: MovieType }> = (props) => {
 
   return (
     <div className={styles.wrapper}>
-      <figure
-        className={styles.figure}
-        onMouseEnter={mouseEnter}
-        onMouseLeave={mouseOut}
-      >
-        <img
-          className={styles.image}
-          src={movie.medium_cover_image}
-          alt={movie.title}
-        />
+      <Link href={`/movies/${movie.id}`}>
+        <figure
+          className={styles.figure}
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseOut}
+        >
+          <img
+            className={styles.image}
+            src={movie.medium_cover_image}
+            alt={movie.title}
+          />
 
-        {showCaption && (
-          <figcaption className={styles["figure-caption"]}>
-            <div className={styles.star}>
-              <StarIcon />
-            </div>
-            <h4 className={styles.rating}>{`${movie.rating} / 10`}</h4>
-            <h4 className={styles.genres}>
-              {movie.genres.length === 1
-                ? movie.genres
-                : movie.genres.slice(0, 2).map((gen, index) => {
-                    return (
-                      <span className={styles.genre} key={index}>
-                        {gen}
-                      </span>
-                    );
-                  })}
-            </h4>
-            <div className={styles.button}>
-              <Button type="button" text="View Details" />
-            </div>
-          </figcaption>
-        )}
-      </figure>
+          {showCaption && (
+            <figcaption className={styles["figure-caption"]}>
+              <div className={styles.star}>
+                <StarIcon />
+              </div>
+              <h4 className={styles.rating}>{`${movie.rating} / 10`}</h4>
+              <h4 className={styles.genres}>
+                {movie.genres.length === 1
+                  ? movie.genres
+                  : movie.genres.slice(0, 2).map((gen, index) => {
+                      return (
+                        <span className={styles.genre} key={index}>
+                          {gen}
+                        </span>
+                      );
+                    })}
+              </h4>
+              <div className={styles.button}>
+                <Button type="button" text="View Details" />
+              </div>
+            </figcaption>
+          )}
+        </figure>
+      </Link>
       <div className={styles.title}>
         <h4>{movie.title}</h4>
         <p>{movie.year}</p>

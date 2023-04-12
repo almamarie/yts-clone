@@ -19,7 +19,7 @@ const MainHeader = () => {
           placeholder="Quick search"
         />
         <nav className={styles.nav}>
-          <Link href="/home">Home</Link>
+          <Link href="/">Home</Link>
           <Link href="/browse-movies">
             <span className={styles["four-k"]}>4K</span>
           </Link>
